@@ -19,8 +19,12 @@ md_readme_path: 'README.md'
 md_gitpage_path: './docs/index.md'
 md_wechat_path: './docs/wechat.md'
 
-# keywords to search
+# keywords to search  增加搜索关键字
 keywords:
+    "Artificial Intelligence":
+        filters: [ "Artificial Intelligence", "Computation and Language","Computer Vision and Pattern Recognition" ]
+    "Computation and Language":
+        filters: [ "Computer Vision and Pattern Recognition", "Computation and Language" ]
     "SLAM":
         filters: ["SLAM", "Visual Odometry"]
     "SFM":
