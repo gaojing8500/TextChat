@@ -53,7 +53,7 @@ def load_config(config_file: str) -> dict:
             keywords[k] = parse_filters(v['filters'])
         return keywords
 
-    with open(config_file, 'r') as f:
+    with open(config_file, 'r',encoding="utf-8") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
         config['kv'] = pretty_filters(**config)
         logging.info(f'config = {config}')

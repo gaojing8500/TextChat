@@ -8,6 +8,8 @@
 import argparse
 
 from arxiv_daily import load_config, demo
+from utils.arxiv_util import ArxivUtils
+
 
 def arxiv_daily_test():
     parser = argparse.ArgumentParser()
@@ -19,6 +21,8 @@ def arxiv_daily_test():
     config = load_config(args.config_path)
     config = {**config, 'update_paper_links': args.update_paper_links}
     demo(**config)
-
+def test_arxiv_utils():
+    model = ArxivUtils()
+    model.get_daily_paper()
 if __name__ == '__main__':
     arxiv_daily_test()
